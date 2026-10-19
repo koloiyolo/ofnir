@@ -1,0 +1,32 @@
+[project]
+name = "ofnir"
+version = "0.1.0"
+readme = "README.md"
+authors = [
+    { name = "Jakub Kołodziej", email = "jakvb.kolodziej@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "django>=6.1.2",
+    "django-filter>=26.2",
+    "django-stubs>=6.1.2",
+    "djangorestframework>=3.18.3",
+    "dotenv>=0.9.9",
+    "psycopg[binary]>=3.3.6",
+    "pymupdf>=2.0",
+    "pytesseract>=0.3.13",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pytest>=9.1.1",
+]
+
+
+[tool.ruff]
+exclude = ["**/migrations/**"]
+force-exclude = true
